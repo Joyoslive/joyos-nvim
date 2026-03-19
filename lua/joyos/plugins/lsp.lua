@@ -1,0 +1,33 @@
+return {
+
+	{
+		"mason-org/mason.nvim",
+		opts = {},
+	},
+
+	{
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = {
+			"mason-org/mason.nvim",
+			"neovim/nvim-lspconfig",
+		},
+		opts = {
+			ensure_installed = { "lua_ls" },
+
+			automatic_enable = {
+				"lua_ls",
+			},
+		},
+	},
+
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = { 'folke/lazydev.nvim' },
+		config = function()
+			vim.lsp.config("lua_ls", {
+				--			diagnostics = { globals = { 'require' } }
+			})
+		end,
+	},
+
+}
