@@ -1,6 +1,14 @@
 return {
 
 	{
+		"neovim/nvim-lspconfig",
+		dependencies = { 'folke/lazydev.nvim', 'hrsh7th/nvim-cmp' },
+		config = function()
+			require 'joyos.config.lsp'
+		end,
+	},
+
+	{
 		"mason-org/mason.nvim",
 		opts = {},
 	},
@@ -19,15 +27,4 @@ return {
 			},
 		},
 	},
-
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = { 'folke/lazydev.nvim' },
-		config = function()
-			vim.lsp.config("lua_ls", {
-				--			diagnostics = { globals = { 'require' } }
-			})
-		end,
-	},
-
 }

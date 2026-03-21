@@ -28,13 +28,3 @@ vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "[B]uffer [P]re
 -- Explorer
 vim.keymap.set("n", "<leader>dl", "<cmd>Ex<cr>", { desc = "[D]irectory [L]ist" })
 
--- LSP
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(ev)
-		local opts = { buffer = ev.buf }
-
-		vim.keymap.set("n", "<leader>bf", function()
-			vim.lsp.buf.format({ async = true })
-		end, opts)
-	end,
-})

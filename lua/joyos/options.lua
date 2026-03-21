@@ -39,3 +39,5 @@ vim.opt.updatetime = 1000
 -- Diagnostics
 vim.diagnostic.config({ virtual_text = true })
 
+-- autoformat
+vim.opt.formatoptions:remove('o')
