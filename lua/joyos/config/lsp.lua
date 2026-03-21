@@ -7,8 +7,6 @@ vim.lsp.config("lua_ls", {
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
-		local opts = { buffer = ev.buf }
-
 		-- Format
 		vim.keymap.set("n", "<leader>bf", function()
 			vim.lsp.buf.format({ async = true })
