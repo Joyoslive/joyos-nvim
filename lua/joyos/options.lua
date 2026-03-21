@@ -1,3 +1,5 @@
+-- Fix termcolor for e.g. tmux
+vim.opt.termguicolors = true
 
 -- Ruler
 vim.opt.relativenumber = true
