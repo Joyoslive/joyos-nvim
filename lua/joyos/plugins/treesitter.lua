@@ -2,7 +2,7 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter',
 		lazy = false,
-		build = ':TsUpdate',
+		build = ':TSUpdate',
 		config = function()
 			require 'nvim-treesitter'.setup {
 				-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
