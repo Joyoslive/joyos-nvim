@@ -44,3 +44,4 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- autoformat
 vim.opt.formatoptions:remove('o')
+

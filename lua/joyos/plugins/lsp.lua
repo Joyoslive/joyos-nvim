@@ -21,10 +21,7 @@ return {
 		},
 		opts = {
 			ensure_installed = { "lua_ls" },
-
-			automatic_enable = {
-				"lua_ls",
-			},
+			automatic_enable = { "lua_ls" },
 		},
 	},
 }
