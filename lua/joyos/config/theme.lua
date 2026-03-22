@@ -1,5 +1,4 @@
--- Base theme
-vim.cmd [[colorscheme palenight]]
+vim.cmd [[colorscheme tokyonight]]
 
 -- CMP
 
