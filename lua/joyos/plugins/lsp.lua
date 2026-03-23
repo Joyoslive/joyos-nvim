@@ -1,7 +1,7 @@
 return {
 
 	{
-		"neovim/nvim-lspconfig",
+		'neovim/nvim-lspconfig',
 		dependencies = { 'folke/lazydev.nvim', 'hrsh7th/nvim-cmp' },
 		config = function()
 			require 'joyos.config.lsp'
@@ -9,19 +9,19 @@ return {
 	},
 
 	{
-		"mason-org/mason.nvim",
+		'mason-org/mason.nvim',
 		opts = {},
 	},
 
 	{
-		"mason-org/mason-lspconfig.nvim",
+		'mason-org/mason-lspconfig.nvim',
 		dependencies = {
-			"mason-org/mason.nvim",
-			"neovim/nvim-lspconfig",
+			'mason-org/mason.nvim',
+			'neovim/nvim-lspconfig',
 		},
 		opts = {
-			ensure_installed = { "lua_ls" },
-			automatic_enable = { "lua_ls" },
+			ensure_installed = { 'lua_ls', 'ts_ls', 'eslint' },
+			automatic_enable = { 'lua_ls', 'ts_ls', 'eslint' },
 		},
 	},
 }

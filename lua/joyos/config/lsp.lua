@@ -4,6 +4,22 @@ vim.lsp.config("lua_ls", {
 	capabilities = cmp_capabilities,
 })
 
+vim.lsp.config("ts_ls", {
+	capabilities = cmp_capabilities,
+})
+
+vim.lsp.config("eslint", {
+	capabilities = cmp_capabilities,
+	filetypes = {
+		'javascript',
+		'typescript',
+		'javascriptreact',
+		'typescriptreact',
+		'javascript.jsx',
+		'typescript.tsx'
+	}
+})
+
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)

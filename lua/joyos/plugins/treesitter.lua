@@ -8,7 +8,7 @@ return {
 				-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
 				install_dir = vim.fn.stdpath('data') .. '/site'
 			}
-			require('nvim-treesitter').install { 'lua' }
+			require('nvim-treesitter').install { 'lua', 'typescript', 'tsx' }
 		end
 	},
 
