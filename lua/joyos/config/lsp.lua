@@ -20,6 +20,13 @@ vim.lsp.config("eslint", {
 	}
 })
 
+vim.lsp.config("cssls", {
+	capabilities = cmp_capabilities,
+	filetypes = {
+		'css',
+	}
+})
+
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)

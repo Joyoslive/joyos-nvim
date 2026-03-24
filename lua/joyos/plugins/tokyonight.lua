@@ -3,6 +3,7 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
+		transparent = true,
 		style = 'moon',
 		styles = {
 			floats = "transparent",

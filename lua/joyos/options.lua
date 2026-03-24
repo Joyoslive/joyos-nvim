@@ -1,6 +1,9 @@
 -- Fix termcolor for e.g. tmux
 vim.opt.termguicolors = true
 
+-- Runtimepath data/site
+vim.opt.runtimepath:prepend(vim.fn.stdpath('data') .. '/site')
+
 -- Ruler
 vim.opt.relativenumber = true
 vim.opt.number = true

@@ -6,9 +6,24 @@ return {
 		config = function()
 			require 'nvim-treesitter'.setup {
 				-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
-				install_dir = vim.fn.stdpath('data') .. '/site'
+				install_dir = vim.fn.stdpath('data') .. '/site',
+				ensure_installed = {
+					'lua', 'typescript', 'tsx', 'css', 'styled'
+				}
 			}
-			require('nvim-treesitter').install { 'lua', 'typescript', 'tsx' }
+
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function(args)
+					local buf = args.buf
+					local ok, parser = pcall(vim.treesitter.get_parser, buf)
+
+					if not ok or not parser then
+						return
+					end
+
+					vim.treesitter.start()
+				end
+			})
 		end
 	},
 
