@@ -6,7 +6,6 @@ return {
 		vim.g.material_style = 'palenight'
 		vim.cmd [[colorscheme material]]
 
-		vim.cmd [[hi CursorLineNr guifg=#ff882b]]
 
 		vim.cmd [[hi CmpGhostText guifg=#676e95]]
 		vim.cmd [[hi @property guifg=#a6accd]]
@@ -14,5 +13,9 @@ return {
 		vim.cmd [[hi @type guifg=#ffcb6b]]
 		vim.cmd [[hi @tag.builtin guifg=#ee747f]]
 		vim.cmd [[hi Exception guifg=#c792ea]]
+
+		vim.cmd [[hi CursorLineNr guifg=#ff882b]]
+		vim.cmd [[hi LineNr guifg=#7e7e7e]]
+		vim.cmd [[hi Comment guifg=#7e7e7e]]
 	end
 }
