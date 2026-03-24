@@ -34,6 +34,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>bf", function()
 			vim.lsp.buf.format({ async = true })
 		end, { desc = '[B]uffer [F]ormat', buffer = ev.buf })
+
+		vim.keymap.set("n", "gd", function()
+			vim.lsp.buf.definition({ async = true })
+		end, { desc = '[G]oto [D]efinition', buffer = ev.buf })
+
+		vim.keymap.set("n", "<C-_>", function()
+			vim.lsp.buf.code_action({ async = true })
+		end, { desc = 'Code actions', buffer = ev.buf })
 	end,
 })
 
