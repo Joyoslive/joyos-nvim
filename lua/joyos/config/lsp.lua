@@ -31,12 +31,17 @@ vim.lsp.config("bashls", {
 	capabilities = cmp_capabilities,
 })
 
+-- Utils
+local function format_with_preference(bufnr)
+	local bufnr = bufnr or vim.api.nvim_get_current_buf();
+end
+
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		-- Format
 		vim.keymap.set("n", "<leader>bf", function()
-			vim.lsp.buf.format({ async = true })
+			require('joyos.lsp.format').format()
 		end, { desc = '[B]uffer [F]ormat', buffer = ev.buf })
 
 		vim.keymap.set("n", "gd", function()
@@ -52,6 +57,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
-		vim.lsp.buf.format({ async = true })
+		require('joyos.lsp.format').format()
 	end
 })
