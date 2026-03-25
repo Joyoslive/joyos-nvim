@@ -27,6 +27,10 @@ vim.lsp.config("cssls", {
 	}
 })
 
+vim.lsp.config("bashls", {
+	capabilities = cmp_capabilities,
+})
+
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)

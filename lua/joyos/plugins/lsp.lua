@@ -20,8 +20,8 @@ return {
 			'neovim/nvim-lspconfig',
 		},
 		opts = {
-			ensure_installed = { 'lua_ls', 'ts_ls', 'eslint', 'cssls' },
-			automatic_enable = { 'lua_ls', 'ts_ls', 'eslint', 'cssls' },
+			ensure_installed = { 'lua_ls', 'ts_ls', 'eslint', 'cssls', 'bashls' },
+			automatic_enable = { 'lua_ls', 'ts_ls', 'eslint', 'cssls', 'bashls' },
 		},
 	},
 }
