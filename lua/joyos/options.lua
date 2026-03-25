@@ -47,3 +47,6 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- autoformat
 vim.opt.formatoptions:remove('o')
+
+-- Remove status line
+vim.opt.showmode = false
