@@ -3,7 +3,6 @@ vim.g.maplocalleader = ' '
 
 -- Exit
 vim.keymap.set("i", "jk", "<esc>", { desc = "Exit insert mode" })
-vim.keymap.set("i", "kj", "<esc>", { desc = "Exit insert mode" })
 vim.keymap.set("i", "<C-c>", "<esc>", { desc = "Exit insert mode" })
 
 -- Search movement with centering
@@ -25,4 +24,3 @@ vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "[B]uffer [P]re
 
 -- Explorer
 vim.keymap.set("n", "<leader>dl", "<cmd>Ex<cr>", { desc = "[D]irectory [L]ist" })
-
