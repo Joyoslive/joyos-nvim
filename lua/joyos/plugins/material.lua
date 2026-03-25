@@ -18,7 +18,7 @@ return {
 		vim.cmd [[hi LineNr guifg=#7e7e7e]]
 		vim.cmd [[hi Comment guifg=#7e7e7e]]
 
+		vim.cmd [[hi @variable.member guifg=#afafd7]]
 		-- Lualine
-		
 	end
 }
