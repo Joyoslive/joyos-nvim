@@ -9,9 +9,8 @@ return {
 
 		vim.cmd [[hi CmpGhostText guifg=#676e95]]
 		vim.cmd [[hi @property guifg=#a6accd]]
-		vim.cmd [[hi @tag guifg=#ffcb6b]]
 		vim.cmd [[hi @type guifg=#ffcb6b]]
-		vim.cmd [[hi @tag.builtin guifg=#ee747f]]
+		vim.cmd [[hi @type.builtin guifg=#ffcb6b]]
 		vim.cmd [[hi Exception guifg=#c792ea]]
 
 		vim.cmd [[hi CursorLineNr guifg=#ff882b]]
@@ -19,6 +18,9 @@ return {
 		vim.cmd [[hi Comment guifg=#7e7e7e]]
 
 		vim.cmd [[hi @variable.member guifg=#afafd7]]
+
+		vim.cmd [[hi @tag guifg=#ffcb6b]]
+		vim.cmd [[hi @tag.builtin guifg=#ee747f]]
 		-- Lualine
 	end
 }
