@@ -8,7 +8,7 @@ return {
 				-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
 				install_dir = vim.fn.stdpath('data') .. '/site',
 				ensure_installed = {
-					'lua', 'typescript', 'tsx', 'css', 'styled'
+					'lua', 'rust', 'typescript', 'tsx', 'css', 'styled'
 				}
 			}
 

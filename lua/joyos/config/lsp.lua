@@ -4,6 +4,10 @@ vim.lsp.config("lua_ls", {
 	capabilities = cmp_capabilities,
 })
 
+vim.lsp.config("rust_analyzer", {
+	capabilities = cmp_capabilities,
+})
+
 vim.lsp.config("ts_ls", {
 	capabilities = cmp_capabilities,
 })
@@ -30,11 +34,6 @@ vim.lsp.config("cssls", {
 vim.lsp.config("bashls", {
 	capabilities = cmp_capabilities,
 })
-
--- Utils
-local function format_with_preference(bufnr)
-	local bufnr = bufnr or vim.api.nvim_get_current_buf();
-end
 
 -- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
