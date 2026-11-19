@@ -41,6 +41,12 @@ vim.opt.inccommand = 'nosplit'
 
 -- Update
 vim.opt.updatetime = 1000
+vim.opt.autoread = true
+
+vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold' }, {
+	group = vim.api.nvim_create_augroup('AutoReload', { clear = true }),
+	command = 'checktime',
+})
 
 -- Diagnostics
 vim.diagnostic.config({ virtual_text = true })
